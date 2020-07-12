@@ -17,7 +17,7 @@ class Email {
         $this->mail->Host       = 'unitibox.com.br';                    // Set the SMTP server to send through
         $this->mail->SMTPAuth   = true;                                   // Enable SMTP authentication
         $this->mail->Username   = 'contato@unitibox.com.br';                     // SMTP username
-        $this->mail->Password   = 'contatouniti123';                               // SMTP password
+        $this->mail->Password   = 'senha';                               // SMTP password
         $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $this->mail->Port       = 587;   
         $this->mail->CharSet =  'utf-8';
