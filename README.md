@@ -1,5 +1,3 @@
-
-
 # Notification library via email using phpMailer
 
 This library has the function of sending e-mail using the phpmailer library. Doing this in an uncomplicated way is essential for any system.
@@ -37,7 +35,7 @@ MIT
 
 ** Training, make good use of it! **
 
-##
+[//]: #
 [Augustus]: <mailto: contato@unitibox.com.br>
 [Unitibox]: <https://unitibox.com.br>
 [phpMailer]: <https://github.com/PHPMailer/PHPMailer>
