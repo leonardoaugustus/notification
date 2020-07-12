@@ -30,7 +30,7 @@ class Email {
     }
 
 
-    public function sendMail ($subject, $body, $replayEmail, $replayName, $addressEmail, $addressName) {
+    public function sendEMail ($subject, $body, $replayEmail, $replayName, $addressEmail, $addressName) {
      
         $this->mail->Subject = (string)$subject;
         $this->mail->Body = $body;
