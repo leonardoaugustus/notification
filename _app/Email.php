@@ -9,23 +9,23 @@ class Email {
 
     private $mail = stdClass::class;
 
-    public function __construct()
+    public function __construct($smtdubug, $host, $user, $pass, $smtpSecure, $port, $setFromMail, $setFromName)
     {
         $this->mail = new PHPMailer(true);
-        $this->mail->SMTPDebug = 2;                      // Enable verbose debug output
-        $this->mail->isSMTP();                                            // Send using SMTP
-        $this->mail->Host       = 'unitibox.com.br';                    // Set the SMTP server to send through
-        $this->mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $this->mail->Username   = 'contato@unitibox.com.br';                     // SMTP username
-        $this->mail->Password   = 'senha';                               // SMTP password
-        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $this->mail->Port       = 587;   
+        $this->mail->SMTPDebug = $smtdubug;                 // Enable verbose debug output
+        $this->mail->isSMTP();                              // Send using SMTP
+        $this->mail->Host       = $host;                    // Set the SMTP server to send through
+        $this->mail->SMTPAuth   = true;                     // Enable SMTP authentication
+        $this->mail->Username   = $user;                    // SMTP username
+        $this->mail->Password   = $pass;                    // SMTP password
+        $this->mail->SMTPSecure = $smtpSecure;              // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $this->mail->Port       = $port;   
         $this->mail->CharSet =  'utf-8';
         $this->mail->setLanguage('br');
         $this->mail->isHTML(true);
         
             //Recipients
-        $this->mail->setFrom('contato@unitibox.com.br', 'Equipe Unitibox');
+        $this->mail->setFrom($setFromMail, $setFromName);
         
     }
 
